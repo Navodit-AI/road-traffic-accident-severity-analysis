@@ -1,0 +1,95 @@
+RTA DATA CLEANING LOG
+
+Standardised Time into consistent HH:MM:SS format
+"Derived new Time_Period column from Time (Morning, Afternoon, Evening, Night) based on hour ranges"
+Standardised Day_of_week values to proper capitalised format
+"Standardised Age_band_of_driver categories (Under 18 → 0–17, Over 51 → 51–100, removed inconsistent spellings)"
+"Standardised Sex_of_driver values (Male, Female, Others) and replaced blanks with Unknown"
+Standardised Educational_level values for consistent capitalisation and naming
+Standardised Vehicle_driver_relation values and replaced missing entries with Unknown
+"Cleaned Driving_experience ranges (e.g., 1-2yr → 1–2, Above 10yr → 10–20, Below 1yr → 0–1)"
+Created ordinal encoded column Exp_Order to numerically represent driving experience levels
+"Grouped Type_of_vehicle into simplified consistent categories (all bus types → Public Transport, all lorry variations → Lorry, blanks → Unknown)"
+"Standardised Owner_of_vehicle categories (Owner, Governmental, Organization, etc.)"
+"Standardised Service_year_of_vehicle formatting (Above 10yr → Above 10 years, 5-10yrs → 5–10 years, blanks → Unknown)"
+"Recoded Defect_of_vehicle values (No defect → No Defect, numeric codes like 5/7 → Defect Present, blanks → Unknown)"
+"Standardised Area_accident_occured values (Residential areas → Residential area, Office areas → Office area, etc.)"
+"Standardised and simplified Lanes_or_Medians categories (Undivided Two way → Two Way (Undivided), etc.)"
+"Simplified complex Road_allignment descriptions into grouped terrain categories (Flat Road, Mountainous Terrain, Gentle Curve, Rolling Terrain, Steep Downward, Unknown)"
+"Standardised Types_of_Junction values (Y Shape, O Shape, Crossing, No junction, Unknown)"
+"Standardised Road_surface_type values (Asphalt roads, Earth roads, Gravel roads, Other)"
+"Standardised Road_surface_conditions values (Dry, Wet or damp)"
+"Standardised Light_conditions values (Daylight, Darkness - lights lit)"
+"Standardised Weather_conditions values (Normal, Raining)"
+Standardised Type_of_collision values and corrected inconsistent naming
+Converted Number_of_vehicles_involved to numeric format
+Converted Number_of_casualties to numeric format
+"Standardised Vehicle_movement categories (Going straight, Reversing, U-Turn, Moving Backward, etc.)"
+Replaced “na” in Casualty_class with Unspecified
+Replaced “na” in Sex_of_casualty with Unknown
+Replaced “na” in Age_band_of_casualty with Unknown
+"Converted numeric Casualty_severity codes into labelled categories (3 → Slight, 2 → Serious, blank → No Injury)"
+Standardised Work_of_casuality values and replaced blanks with Unknown
+Standardised Fitness_of_casuality values and replaced blanks with Unknown
+"Standardised Cause_of_accident categories (e.g., Overtaking, No distancing, Changing lane, Driving carelessly, etc.)"
+"Standardised Accident_severity categories (Slight Injury, Serious Injury, Fatal injury)"
+Removed Pedestrian_movement column as it was not required for analysis
+Replaced blank cells across dataset with structured “Unknown” labels where appropriate to ensure consistency
+
+
+Analysis – Derived Columns
+
+"Added Time_Period (derived from Time using hour ranges) to categorize accidents into Morning, Afternoon, Evening, and Night for temporal trend analysis."
+Added Exp_Order (ordinal encoding of Driving_experience) to numerically represent experience levels for modeling and correlation analysis.
+
+
+
+Analysis – KPIs
+
+Added Total Accidents (COUNT of all accident records) to measure overall accident frequency in the dataset.
+Added Total Casualties (SUM of Number_of_casualties) to capture the total human impact across all reported accidents.
+Added Serious Accidents % (COUNT of Serious Injury accidents ÷ Total Accidents × 100) to quantify the proportion of high-severity cases.
+Added Fatal Accidents % (COUNT of Fatal injury accidents ÷ Total Accidents × 100) to measure the percentage of fatal outcomes.
+Added Serious Injury % (COUNT of Serious Injury casualties ÷ Total Casualties × 100) to evaluate the share of serious injuries among all victims.
+Added Slight Injury % (COUNT of Slight Injury casualties ÷ Total Casualties × 100) to assess the proportion of minor injuries.
+Added Most Common Cause (MODE of Cause_of_accident) to identify the dominant behavioral or operational risk factor.
+
+
+
+Analysis – Pivot Tables
+
+"Added Accident Severity by Road Surface, Light Condition, and Weather to analyze how environmental conditions influence accident severity distribution."
+"Added Accident Severity by Light Conditions to compare fatal, serious, and slight injuries under daylight and different darkness conditions."
+Added Accident Severity by Cause of Accident to identify which behavioral factors are associated with higher fatal and serious outcomes.
+Added Accident Severity by Type of Vehicle to examine how vehicle category influences severity distribution.
+"Added Casualty Severity by Casualty Class to compare impact levels among Drivers, Passengers, and Pedestrians."
+Added Accident Severity by Day of Week to evaluate temporal patterns in accident frequency and severity.
+Added Accident Severity by Driving Experience to assess how experience level affects fatal and serious accident proportions.
+Added Accident Severity by Age Band and Driving Experience (Exp_Order) to analyze interaction between driver age and experience level.
+Added Severity Percentage (Serious + Fatal %) by Driving Experience to compare high-risk proportions across experience categories.
+
+
+
+Dashboard – Implementation Log
+
+"Added 7 Main KPI Cards including Total Accidents, Total Casualties, Serious Accident %, Fatal Accident %, Serious Injury %, Slight Injury %, and Most Common Cause to provide an immediate high-level severity overview."
+"Calculated percentage KPIs (Serious %, Fatal %, Injury %) directly from pivot totals to ensure accuracy and consistency with dataset aggregates."
+"Designed slicer panel with filters for Driving Experience, Accident Severity, Type of Vehicle, Day of Week, Weather, Road Surface, Light Condition and Surface Type to enable dynamic cross-analysis."
+Ensured all slicers are connected to relevant pivot tables to maintain synchronized filtering across charts.
+Created Pie Chart for overall Accident Severity distribution to visually highlight dominance of Slight Injuries (84.56%).
+Created Radar Chart for Type of Vehicle vs Injury Severity to compare severity patterns across vehicle categories.
+Created Donut Chart for Vehicle Type Severity Distribution to show proportional contribution by vehicle categories.
+"Built Casualty Vulnerability Horizontal Bar Chart to compare Driver, Passenger and Pedestrian exposure across severity levels."
+Designed Bubble Chart (Severity Risk vs Exposure by Driving Experience) to analyze relationship between accident volume and serious/fatal risk percentage.
+Built Road Surface vs Accident Count 3D Column Chart to assess infrastructure-related risk distribution.
+Created Combined Line + Column Chart for High-Risk Days analysis to compare total accidents with severity trend simultaneously.
+Created Light Condition vs Severity Column Chart to assess accident patterns in Daylight vs Darkness conditions.
+Designed Weather Condition Horizontal Bar Chart to evaluate environmental risk contribution.
+"Standardized color coding across dashboard (Red = Fatal, Dark Blue = Serious, Orange = Slight) for consistent severity interpretation."
+Applied darker professional theme and contrast-based KPI styling to enhance readability and executive presentation quality.
+Removed gridlines and adjusted spacing for cleaner layout and dashboard alignment.
+"Added chart titles reflecting analytical intent (e.g., ""Severity Risk vs Accident Exposure by Driving Experience"", ""High-Risk Days: Accident Severity Trends"")."
+Validated that all charts reference pivot tables below dashboard to prevent range breakage during slicer interaction.
+Verified that deleting unrelated rows does not affect dashboard since pivots reference fixed cleaned dataset range.
+"Ensured all Grand Totals across charts equal 12,316 accidents for numerical consistency."
+Confirmed KPI calculations match pivot table totals and percentage derivations.
