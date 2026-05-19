@@ -41,7 +41,7 @@ This project performs a full data analysis pipeline on road traffic accident rec
 
 | Property | Detail |
 |---|---|
-| **Source** | [Kaggle – Road Traffic Accident Dataset](https://www.kaggle.com/) |
+| **Source** | Kaggle – Road Traffic Accident Dataset |
 | **Coverage** | Addis Ababa, Ethiopia |
 | **Period** | 2017 – 2020 |
 | **Records** | 12,316 accident entries |
