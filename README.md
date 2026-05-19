@@ -183,5 +183,5 @@ No installation required — built entirely in **Google Sheets**.
 ---
 
 <p align="center">
-  Built by <strong>[Your Name]</strong> &nbsp;|&nbsp; 📊 Data Analytics Portfolio
+Built by <strong>Navodit Sharma</strong> &nbsp;|&nbsp; 📊 Data Analytics
 </p>
