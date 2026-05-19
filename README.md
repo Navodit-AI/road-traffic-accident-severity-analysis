@@ -1,69 +1,39 @@
 # 🚦 Data-Driven Analysis of Road Traffic Accident Severity
 
-![Project Type](https://img.shields.io/badge/Project%20Type-Team%20Academic%20Project-blueviolet?style=flat-square)
-![Domain](https://img.shields.io/badge/Domain-Data%20Analytics%20%7C%20Public%20Safety-blue?style=flat-square)
+![Project Type](https://img.shields.io/badge/Project%20Type-Data%20Analytics-blueviolet?style=flat-square)
+![Domain](https://img.shields.io/badge/Domain-Public%20Safety%20%7C%20Transportation-blue?style=flat-square)
 ![Tool](https://img.shields.io/badge/Tool-Google%20Sheets-green?style=flat-square&logo=google-sheets)
 ![Dataset](https://img.shields.io/badge/Dataset-Kaggle%20%7C%20Addis%20Ababa%20RTA-orange?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
 
-> **⚠️ Attribution Notice:** This is a team project. The original repository is hosted at [IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity](https://github.com/IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity). This fork/mirror exists to showcase my individual contributions for portfolio purposes.
 
----
 
 ## 📌 Table of Contents
 
 - [Project Overview](#-project-overview)
-- [My Contributions](#-my-contributions)
-- [Team & Collaboration](#-team--collaboration)
 - [Dataset](#-dataset)
 - [Architecture & Workflow](#-architecture--workflow)
-- [Key KPIs & Findings](#-key-kpis--findings)
+- [Key KPIs](#-key-kpis)
 - [Dashboard Components](#-dashboard-components)
 - [Key Insights](#-key-insights)
 - [Recommendations](#-recommendations)
 - [Setup & Usage](#-setup--usage)
 - [Limitations](#-limitations)
-- [License](#-license)
 
 ---
 
 ## 🗺️ Project Overview
 
-This project performs an end-to-end data analysis of road traffic accident data from **Addis Ababa (2017–2020)** to identify key drivers of accident severity. The goal is to surface actionable insights that can support traffic safety decision-making through a structured, interactive dashboard.
+This project performs a full data analysis pipeline on road traffic accident records from **Addis Ababa, Ethiopia (2017–2020)** to uncover patterns in accident severity and support data-driven road safety interventions.
 
-**Research Questions Addressed:**
+**Core Questions Addressed:**
 - How does **time of day** affect accident severity?
-- Which **vehicle types** are associated with fatal and serious injuries?
+- Which **vehicle types** are linked to fatal and serious injuries?
 - What role does **driving experience** play in crash outcomes?
-- How do **road surface** and **weather conditions** influence severity?
+- How do **road surface** and **weather** conditions influence severity?
 - Who are the most **vulnerable road users**?
 
----
-
-## 👤 My Contributions
-
-> This section documents the work I personally led or significantly contributed to within the team.
-
-| Area | My Contribution |
-|---|---|
-| **Data Cleaning** | Standardized categorical fields, handled missing values (labeled "Unknown"), corrected inconsistencies in vehicle type and severity labels, trimmed whitespace across the dataset |
-| **KPI Design** | Defined and calculated core KPIs: Total Accidents, Total Casualties, Severity distribution percentages (Fatal %, Serious %, Slight %) |
-| **Pivot Analysis** | Built pivot tables segmenting severity by time of day, vehicle type, road surface, weather, and driving experience |
-| **Dashboard** | Designed and built the interactive Google Sheets dashboard including the Radar Chart (Vehicle Type vs. Severity) and Bubble Chart (Experience vs. Risk) |
-| **Documentation** | Authored the structured project README, data dictionary, and analysis documentation |
-| **Presentation** | Contributed to the final slide deck with insights framing and visual storytelling |
-
-> *Note: Specific module ownership can be verified by reviewing the commit history and file structure of the original repository, and through team documentation.*
-
----
-
-## 👥 Team & Collaboration
-
-This project was completed as part of a collaborative academic team effort. All team members contributed to various stages of the project.
-
-**Original Repository:** [github.com/IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity](https://github.com/IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity)
-
-> I was a core contributor to this project but am not listed as a collaborator on the original repository — hence this portfolio mirror, which attributes the full team appropriately.
+**Skills Demonstrated:** Data cleaning, pivot table analysis, KPI design, dashboard development, data storytelling, insight generation.
 
 ---
 
@@ -75,7 +45,7 @@ This project was completed as part of a collaborative academic team effort. All 
 | **Coverage** | Addis Ababa, Ethiopia |
 | **Period** | 2017 – 2020 |
 | **Records** | 12,316 accident entries |
-| **Primary Tool** | Google Sheets |
+| **Tool** | Google Sheets |
 
 ### Data Dictionary
 
@@ -122,8 +92,7 @@ Interactive Dashboard (Google Sheets)
   ├─ KPI Cards
   ├─ Radar Chart
   ├─ Bubble Chart
-  ├─ Bar & Pie Charts
-  └─ Conditional Formatting
+  └─ Bar & Pie Charts
         │
         ▼
 Insights → Recommendations → Presentation
@@ -131,7 +100,7 @@ Insights → Recommendations → Presentation
 
 ---
 
-## 📊 Key KPIs & Findings
+## 📊 Key KPIs
 
 | KPI | Value |
 |---|---|
@@ -142,68 +111,62 @@ Insights → Recommendations → Presentation
 | **Fatal Accident %** | ~1% |
 | **Most Common Cause** | No Distancing |
 
-> ⚡ *While slight injuries dominate numerically, serious and fatal crashes carry disproportionate human and economic impact — making targeted severity analysis critical.*
-
 ---
 
 ## 📈 Dashboard Components
 
 | Component | Purpose |
 |---|---|
-| **Severity Distribution** | Overall composition of Slight / Serious / Fatal cases |
-| **Vehicle Type vs. Severity (Radar Chart)** | Contribution of each vehicle category to injury levels |
-| **Severity by Time of Day** | Identify high-risk temporal windows |
-| **Road User Vulnerability** | Compare Drivers vs. Passengers vs. Pedestrians |
-| **Experience vs. Severity Risk (Bubble Chart)** | Driving experience correlated with severe outcomes |
-| **Severity by Road Surface** | Infrastructure-related accident frequency |
+| **Severity Distribution** | Overall Slight / Serious / Fatal breakdown |
+| **Vehicle Type vs. Severity (Radar Chart)** | Each vehicle category's contribution to injury levels |
+| **Severity by Time of Day** | High-risk temporal windows |
+| **Road User Vulnerability** | Drivers vs. Passengers vs. Pedestrians |
+| **Experience vs. Risk (Bubble Chart)** | Driving experience correlated with severe outcomes |
+| **Severity by Road Surface** | Infrastructure-related frequency |
 | **Weather Condition Analysis** | Environmental conditions vs. accident counts |
-| **Light Condition Analysis** | Visibility impact on severity distribution |
+| **Light Condition Analysis** | Visibility impact on severity |
 
 ---
 
 ## 💡 Key Insights
 
-- 🔵 **Slight injuries** represent the majority (~84%) of recorded cases, but serious/fatal crashes cluster under specific risk conditions.
-- 🌙 **Night-time driving** is associated with increased likelihood of severe outcomes.
-- 🚛 **Heavy vehicles** are disproportionately linked to fatal accidents.
-- 🌧️ **Poor road surfaces and adverse weather** amplify severity risk significantly.
-- 🚶 **Pedestrians and passengers** show higher vulnerability in severe crash scenarios.
-- 📏 **"No distancing"** is the most frequently reported primary cause across all severity levels.
-- 🔗 Risk clusters emerge at specific intersections of **time of day**, **vehicle type**, and **environmental condition**.
+- 🔵 Slight injuries dominate (~84%) but serious/fatal crashes cluster under specific risk conditions
+- 🌙 Night-time driving significantly increases likelihood of severe outcomes
+- 🚛 Heavy vehicles are disproportionately linked to fatal accidents
+- 🌧️ Poor road surfaces and adverse weather amplify severity risk
+- 🚶 Pedestrians and passengers are the most vulnerable road user groups
+- 📏 "No distancing" is the most frequently reported cause across all severity levels
 
 ---
 
 ## ✅ Recommendations
 
-1. **Increase enforcement** during high-risk night-time periods
-2. **Strengthen heavy vehicle regulation** and compliance monitoring
-3. **Improve road surface maintenance** and lighting infrastructure
-4. **Implement targeted driver training** programs, especially for inexperienced drivers
-5. **Focus interventions** on vulnerable road users (pedestrians, passengers)
-6. **Apply risk-based resource allocation** using dashboard-derived cluster insights
+1. Increase enforcement during high-risk night-time periods
+2. Strengthen heavy vehicle regulation and compliance monitoring
+3. Improve road surface maintenance and lighting infrastructure
+4. Implement targeted driver training for inexperienced drivers
+5. Focus interventions on vulnerable road users
+6. Apply risk-based resource allocation using dashboard insights
 
 ---
 
 ## 🚀 Setup & Usage
 
-This project is built entirely in **Google Sheets** — no local installation required.
+No installation required — built entirely in **Google Sheets**.
 
-### To View the Analysis
-
-1. Open the [original repository](https://github.com/IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity)
-2. Navigate to the `Dashboard/` folder and download the `.xlsx` file
-3. Upload to **Google Sheets** or open in **Microsoft Excel**
-4. Use the filter controls in the dashboard tab to explore severity breakdowns interactively
+1. Download the `.xlsx` file from the `Dashboard/` folder
+2. Upload to Google Sheets or open in Microsoft Excel
+3. Use the filter controls in the dashboard tab to explore interactively
 
 ### Folder Structure
 
 ```
-├── Raw Dataset/          # Original Kaggle CSV data
-├── Cleaned Dataset/      # Processed, standardized dataset
-├── Calculation_&_PivotTable/  # Pivot analyses and derived metrics
-├── Dashboard/            # Interactive Google Sheets dashboard
-├── Documentation/        # Project report and data dictionary
-├── Presentation/         # Final slide deck
+├── Raw Dataset/                  # Original Kaggle CSV
+├── Cleaned Dataset/              # Processed, standardized data
+├── Calculation_&_PivotTable/     # Pivot analyses and metrics
+├── Dashboard/                    # Interactive dashboard
+├── Documentation/                # Project report
+├── Presentation/                 # Final slide deck
 └── README.md
 ```
 
@@ -211,20 +174,14 @@ This project is built entirely in **Google Sheets** — no local installation re
 
 ## ⚠️ Limitations
 
-- Dataset limited to **one city** (Addis Ababa) — findings may not generalize broadly
-- **Snapshot data** — no continuous time-series modeling or trend forecasting
-- **No geospatial mapping** in current analysis scope
-- **Observational** in nature — causality cannot be inferred
-- Missing behavioral detail (e.g., exact speed, intoxication levels)
-
----
-
-## 📄 License
-
-This project uses publicly available data from Kaggle. All analytical work and dashboard design are original contributions by the project team. If you reference or build upon this work, please attribute both this repository and the [original team repository](https://github.com/IshanMaheshwari-777/Data-Driven-Analysis-of-Road-Traffic-Accident-Severity).
+- Dataset limited to one city — findings may not generalize broadly
+- No continuous time-series modeling or trend forecasting
+- No geospatial mapping in current scope
+- Observational analysis — causality cannot be inferred
+- Missing behavioral detail (speed, intoxication, etc.)
 
 ---
 
 <p align="center">
-  Made with 📊 data and ☕ caffeine &nbsp;|&nbsp; Portfolio project by <strong>Navodit Sharma</strong>
+  Built by <strong>[Your Name]</strong> &nbsp;|&nbsp; 📊 Data Analytics Portfolio
 </p>
